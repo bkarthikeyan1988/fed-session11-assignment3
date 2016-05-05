@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>Session 10 Assignment 3</title>
+	<meta charset="UTF-8" />
+	<script src="js/angular.min.js" type="text/javascript">
+	</script>
+	<script type="text/javascript">
+		var myApp = angular.module('myapp',[]);
+
+	myApp
+	    .controller('MyCtrl1', function ($scope) {
+	        $scope.showAlert = function (msg) {
+	            alert(msg);
+	        };
+	    })
+	</script>
+	<!-- Angular Script Block Ends -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- CSS Block Ends -->
+</head>
+<body>
+	<h2>Use of NgDblClick event on the button to show an alert.</h2>
+	<div ng-app="myapp">
+	    <div ng-controller="MyCtrl1">
+	        <button ng-dblclick="showAlert('Alert Using ng-dblclick')">Double Click</button>
+	    </div>
+	</div>
+</body>
+</html>
